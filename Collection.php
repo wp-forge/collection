@@ -125,7 +125,7 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
 		$keys = (array) $keys;
 
 		return $this->filter(
-			function ( $key, $value ) use ( $keys ) {
+			function ( $value, $key ) use ( $keys ) {
 				return ! in_array( $key, $keys, true );
 			}
 		);
@@ -463,7 +463,7 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
 	 */
 	public function only( $keys ) {
 		return $this->filter(
-			function ( $key, $value ) use ( $keys ) {
+			function ( $value, $key ) use ( $keys ) {
 				return in_array( $key, $keys, true );
 			}
 		);
