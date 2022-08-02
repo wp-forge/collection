@@ -1,5 +1,5 @@
 {
-  "name": "wpscholar/collection",
+  "name": "wp-forge/collection",
   "description": "A PHP utility class for manipulating collections.",
   "type": "library",
   "license": "GPL-2.0-or-later",
@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "wpscholar\\": ""
+      "WP_Forge\\Collection\\": ""
     }
   }
 }

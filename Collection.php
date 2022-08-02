@@ -1,16 +1,12 @@
 <?php
 /**
  * A PHP utility class for manipulating collections.
- *
- * @package wpscholar\Collection
  */
 
-namespace wpscholar;
+namespace WP_Forge\Collection;
 
 /**
  * Class Collection
- *
- * @package wpscholar
  */
 class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonSerializable {
 
