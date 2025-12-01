@@ -135,7 +135,7 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
 	 *
 	 * @return static
 	 */
-	public function filter( callable $callback = null ) {
+	public function filter( ?callable $callback = null ) {
 		if ( null === $callback ) {
 			return new static( array_filter( $this->items ) );
 		}
@@ -624,7 +624,7 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
 	 *
 	 * @return static
 	 */
-	public function sort( callable $callback = null ) {
+	public function sort( ?callable $callback = null ) {
 		$items = $this->items;
 		$callback ? uasort( $items, $callback ) : asort( $items );
 
@@ -743,7 +743,7 @@ class Collection implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
 	 *
 	 * @return mixed
 	 */
-	public function when( $value, callable $callback, callable $fallback = null ) {
+	public function when( $value, callable $callback, ?callable $fallback = null ) {
 		return $value ? $callback( $this, $value ) : ( $fallback ? $fallback( $this, $value ) : $this );
 	}
 
